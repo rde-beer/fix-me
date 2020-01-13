@@ -1,0 +1,1 @@
+java -jar router-artifact-id/target/router-artifact-id-1.0-SNAPSHOT.jar 

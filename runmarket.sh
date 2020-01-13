@@ -1,0 +1,1 @@
+java -jar market-artifact-id/target/market-artifact-id-1.0-SNAPSHOT.jar

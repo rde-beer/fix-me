@@ -1,0 +1,1 @@
+java -jar broker-artifact-id/target/broker-artifact-id-1.0-SNAPSHOT.jar
