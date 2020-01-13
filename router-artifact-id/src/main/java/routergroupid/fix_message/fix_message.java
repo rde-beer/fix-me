@@ -33,6 +33,15 @@ public class fix_message {
         return fixmessage;
     }
 
+    public static String makefix_market(String message_elements){
+        String elements [] = message_elements.split(";");
+        String fixmessage = 
+        "Broker_ID="+elements[0]+
+        "|status="+elements[1]+"|";
+        fixmessage += "10="+ascii_checksum(fixmessage);
+        return fixmessage;
+    }
+
     // This is just taking the full fixmessage recieved
     // it checking if the checksum matches up or not to the data contained
     public static boolean checksum_verification(String message){

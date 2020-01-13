@@ -88,6 +88,15 @@ public class fix_message {
         return 0;
     }
 
+    public static String makefix_market(String message_elements){
+        String elements [] = message_elements.split(";");
+        String fixmessage = 
+        "Broker_ID="+elements[0]+
+        "|status="+elements[1]+"|";
+        fixmessage += "10="+ascii_checksum(fixmessage);
+        return fixmessage;
+    }
+
     // this takes the data without the checksum and counts the ascii to come up with the checksum number
     private static long ascii_checksum(String data){
         long temp_sum = ascii_sum(data);

@@ -77,7 +77,7 @@ class SubHandler implements Runnable{
                             printWriter = new PrintWriter(Main.nyseSocket.getOutputStream());
                             System.out.println("fix message router: "+inputStreamLine);
                             // printWriter.println("1");printWriter.flush(); //THIS WILL BE A FIX MESSAGE
-                            printWriter.println(inputStreamLine);printWriter.flush(); //THIS WILL BE A FIX MESSAGE
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush(); //THIS WILL BE A FIX MESSAGE
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.nyseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -86,7 +86,7 @@ class SubHandler implements Runnable{
                         case "2":
                             printWriter = new PrintWriter(Main.nyseSocket.getOutputStream());
                             // printWriter.println("2");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.nyseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -95,7 +95,7 @@ class SubHandler implements Runnable{
                         case "3":   
                             printWriter = new PrintWriter(Main.nyseSocket.getOutputStream());
                             // printWriter.println("3");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.nyseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -104,7 +104,7 @@ class SubHandler implements Runnable{
                         case "4":
                             printWriter = new PrintWriter(Main.lseSocket.getOutputStream());
                             // printWriter.println("1");printWriter.flush(); //THIS WILL BE A FIX MESSAGE
-                            printWriter.println(inputStreamLine);printWriter.flush(); //THIS WILL BE A FIX MESSAGE
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush(); //THIS WILL BE A FIX MESSAGE
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.lseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -113,7 +113,7 @@ class SubHandler implements Runnable{
                         case "5":
                             printWriter = new PrintWriter(Main.lseSocket.getOutputStream());
                             // printWriter.println("2");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.lseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -122,7 +122,7 @@ class SubHandler implements Runnable{
                         case "6":   
                             printWriter = new PrintWriter(Main.lseSocket.getOutputStream());
                             // printWriter.println("3");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.lseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -131,7 +131,7 @@ class SubHandler implements Runnable{
                         case "7":
                             printWriter = new PrintWriter(Main.jseSocket.getOutputStream());
                             // printWriter.println("1");printWriter.flush(); //THIS WILL BE A FIX MESSAGE
-                            printWriter.println(inputStreamLine);printWriter.flush(); //THIS WILL BE A FIX MESSAGE
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush(); //THIS WILL BE A FIX MESSAGE
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.jseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -140,7 +140,7 @@ class SubHandler implements Runnable{
                         case "8":
                             printWriter = new PrintWriter(Main.jseSocket.getOutputStream());
                             // printWriter.println("2");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.jseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
@@ -149,7 +149,7 @@ class SubHandler implements Runnable{
                         case "9":   
                             printWriter = new PrintWriter(Main.jseSocket.getOutputStream());
                             // printWriter.println("3");printWriter.flush();
-                            printWriter.println(inputStreamLine);printWriter.flush();
+                            printWriter.println(fix_message.get_Instrument(inputStreamLine));printWriter.flush();
                             bufferedReader = new BufferedReader(new InputStreamReader(Main.jseSocket.getInputStream()));
                             inputStreamLine = bufferedReader.readLine();
                             printWriter = new PrintWriter(socket.getOutputStream());
